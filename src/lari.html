@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[AFSL] LARI</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/checklist.css">
+    
+    <!-- JQuery -->
+    <script src="./js/libraries/jquery-3.3.1.min.js"></script>
+    
+    <!-- Javascript -->
+    <script src="./js/main.js"></script>
+    <script src="./js/checklists.js"></script>
+    
+  </head>
+  
+  <body>
+    <!--  Menu of buttons -->
+    <div class="menu">
+      <div class="menuButtons">
+        <button type="button" id="flightOpsBt" class="menuButton">Flight Ops</button>
+        <button type="button" id="maintenanceBt" class="menuButton" >Maintenance</button>
+        <button type="button" id="manualsBt" class="menuButton">Manuals</button>
+        <button type="button" id="checklistsBt" class="menuButton">Checklists</button>
+        <button type="button" id="flightLogsBt" class="menuButton">Flights Logs</button>
+      </div>
+      <div class="menuSettings">
+        <button type="button" id="settings" class="menuButton">Settings</button>
+        <button type="button" id="account" class="menuButton">Account</button>
+      </div>
+    </div>
+
+    <!-- Display containers - switches based on menu option selected -->
+    <div class="display">
+      <!-- Flight Operations Display -->
+      <div class="displayOpt" id="flightOps">
+        <h1> Flight Operations Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- Maintenance Display -->
+      <div class="displayOpt" id="maintenance">
+        <h1>Maintenance Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- Manuals Display -->
+      <div class="displayOpt" id="manuals">
+        <h1>Manuals Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- Checklists Display -->
+      <div class="displayOpt" id="checklists">
+        <!-- Checklist Drop Down/ Checklist Choosing -->
+        <div class="checkMenu clearfix">
+          <div class="menuText">Checklist: </div>
+          <select id="checklistDrop">
+          </select>
+          <div class="checkMenuButtons">
+            <button type="button" id="new" class="checkButton">New</button>
+            <button type="button" id="load" class="checkButton">Load</button>
+            <button type="button" id="rename" class="checkButton">Rename</button>
+            <button type="button" id="del" class="checkButton">Delete</button>
+          </div>
+        </div>
+        
+        <!-- Checklist Editing Menu -->
+        <div class="checklist clearfix">
+          <div class="stepMenu">
+            <button type="button" id="add" class="checkButton">Add</button>
+            <button type="button" id="edit" class="checkButton">Edit</button>
+            <button type="button" id="remove" class="checkButton">Remove</button>
+            <button type="button" id="move" class="checkButton">Move</button>
+            <button type="button" id="reset" class="checkButton">Reset</button>
+          </div>
+          <div class="steps">
+            <!-- A section of checklist items -->
+            <div class="section">
+              <h1>Section 1</h1>
+              <label class="item">
+                <span class="todo">TODO Item 1</span>
+                <span class="exp">EXP Item 1</span>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="item">
+                <span class="todo">TODO Item 2</span>
+                <span class="exp">EXP Item 2</span>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Flight Logs Display -->
+      <div class="displayOpt" id="flightLogs">
+        <h1>Flight Logs Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- Settings Display -->
+      <div class="displayOpt" id="flightLogs">
+        <h1>Settings Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- Accounts Display -->
+      <div class="displayOpt" id="flightLogs">
+        <h1>Accounts Display</h1>
+        <h2>Not yet implemented yet.</h2>
+      </div>
+      
+      <!-- LARI Startup Display -->
+      <div class="displayOpt" id="lari">
+        <h1>Welcome to LARI</h1>
+        <div id="announcements">
+          <h2>Announcements</h2>
+          <h3>Date: 6/23/18</h3>
+          <ul>
+            <li>Currently developing the Checklist tab!
+          </ul>
+        </div>
+        
+        <div id="about">
+          <h2>About Us</h2>
+          <h4>The LARI Management System will help you keep track and monitor AFSL UAS for flight operation missions.</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

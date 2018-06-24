@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px 0px;
+  margin: 0px;
+  background-color: white;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  float: left;
+}
+
+.menu .menuButtons {
+  height: 100%;
+  width: 70%;
+  float: left;
+}
+
+.menu .menuSettings {
+  height: 100%;
+  width: 30%;
+  float: right;
+}
+
+.menu .menuSettings #settings {
+  float: right;
+}
+
+.menu .menuSettings #account {
+  float: right;
+}
+
+.menuButton {
+  height: 60px;
+  width: 160px;
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: white;
+  float: left;
+  text-align: center;
+  padding: 0px;
+  border: 0px solid black;
+  opacity: 0.7;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.menu .menuSettings .menuButton {
+  width: 120px;
+}
+
+.menuButton:hover {
+  background-color: #e1efef;
+  opacity: 1;
+}
+
+.menuButton:focus {
+  outline: 0;
+}
+
+.active {
+  opacity: 1;
+  background-color: #017777 !important;
+  color: white;
+}
+
+.display {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.displayOpt {
+  display: none;
+}
+
+#lari {
+  display: block;
+}
+
+h1 {
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-size: 32px;
+  padding: 10px 0px;
+  margin: 0 auto;
+  text-align: center;
+}
