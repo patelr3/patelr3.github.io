@@ -26,7 +26,58 @@ function main() {
     }
   });
   
+  // Handle the checklist sections
+  
+  // Handle textarea clicks
+  $('textarea').on('click', function() {
+    var textarea = $(this)[0];
+    if (!textarea.classList.contains('edit')) {
+      var checkmark = $(this).parent().parent().find('.checkmark')[0];
+      if (checkmark.classList.contains('after')) {
+        checkmark.classList.remove('after');
+      } else {
+        checkmark.classList.add('after');
+      }
+    }
+  });
+  
   // Handle the checklist steps
+  $('.listButtons .listButton').on('click', function () {
+    // Figure out which button/action was done
+    var listButtonID = $(this).attr('id');
+    switch(listButtonID) {
+      case 'add':
+        break;
+      case 'edit':
+        // Change button state
+        $(this).toggleClass('pressed');
+        
+        // Change text area state
+        var textarea = $(this).parent().parent().find('textarea')[0];
+        if (textarea.classList.contains('edit')) {
+          textarea.readOnly = true;
+          textarea.classList.remove('edit');
+        } else {
+          textarea.readOnly = false;
+          textarea.classList.add('edit');
+        }
+        break;
+      case 'move':
+        break;
+      case 'remove':
+        break;
+      default:
+        break;
+    }
+  });
+  
+  // Handle textarea resizes
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (100) + '%;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
 }
 
 $(document).ready(main);

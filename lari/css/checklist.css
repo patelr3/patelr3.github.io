@@ -76,7 +76,7 @@
 }
 
 .stepMenu {
-  height: 400px;
+  height: 100%;
   width: 100px;
   display: block;
   float: left;
@@ -102,24 +102,35 @@
   height: 100%;
   width: 90%;
   min-width: 600px;
-  font-size: 22px;
+  float: left;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
   float: left;
   border: 2px solid black;
 }
 
 .steps .todo {
   width: 50%;
+  white-space: normal;
   float: left;
+  border-right: solid 1px gray;
 }
 
 .steps .exp {
-  width: 40%;
+  width: 50%;
+  color: light-gray;
+  padding: 0px 0px 0px 20px;
   float: left;
 }
 
 .steps .item {
-  height: 24px;
+  height: 100%;
+  width: 70%;
   display: block;
+  float: left;
   position: relative;
   padding-left: 35px;
   margin: 10px 0px 10px 10px;
@@ -151,7 +162,7 @@
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a green background */
 .item input:checked ~ .checkmark {
   background-color: #00d832;
 }
@@ -179,4 +190,49 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.listElement {
+  height: 100%;
+  float: left;
+}
+
+.steps .section .listElement .listButtons {
+  height: 100%;
+  width: 25%;
+  margin: 10px 20px 10px 0px;
+  float: right;
+}
+
+.listElement .listButtons .listButton {
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Styles a button after it is active or "pressed" */
+.listButtons .pressed {
+  border: 1px solid blue;
+}
+
+/* Formats the textarea for TODO and Expected */
+.inputtxt {
+  height: 100%;
+  width: 100%;
+  padding: 0px 10px;
+  font-size: 22px;
+  font-family: Times New Roman;
+  wrap: soft;
+  resize: none;
+  border: 0px solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Formats the textarea when user is editing */
+.item .edit {
+  outline: 2px solid black;
+  cursor: auto;
 }

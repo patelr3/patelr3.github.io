@@ -70,28 +70,47 @@
         <!-- Checklist Editing Menu -->
         <div class="checklist clearfix">
           <div class="stepMenu">
-            <button type="button" id="add" class="checkButton">Add</button>
-            <button type="button" id="edit" class="checkButton">Edit</button>
-            <button type="button" id="remove" class="checkButton">Remove</button>
-            <button type="button" id="move" class="checkButton">Move</button>
-            <button type="button" id="reset" class="checkButton">Reset</button>
+            <button type="button" id="addSec" class="checkButton">Add</button>
+            <button type="button" id="editSec" class="checkButton">Edit</button>
+            <button type="button" id="removeSec" class="checkButton">Remove</button>
+            <button type="button" id="moveSec" class="checkButton">Move</button>
+            <button type="button" id="resetSec" class="checkButton">Reset</button>
           </div>
           <div class="steps">
             <!-- A section of checklist items -->
             <div class="section">
               <h1>Section 1</h1>
-              <label class="item">
-                <span class="todo">TODO Item 1</span>
-                <span class="exp">EXP Item 1</span>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              <label class="item">
-                <span class="todo">TODO Item 2</span>
-                <span class="exp">EXP Item 2</span>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
+              <div class="listElement">
+                <label class="item">
+                  <span class="todo">TODO Item 1 Lots of text now with actual words etc etc this is america dont catch you trippin now</span>
+                  <span class="exp">EXP Item 1</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="listButtons">
+                  <button class="listButton" id="remove">remove</button>
+                  <button class="listButton" id="move">move</button>
+                  <button class="listButton" id="edit">edit</button>
+                  <button class="listButton" id="add">add</button>
+                </div>
+              </div>
+              
+              <div class="listElement">
+                <label class="item">
+                  <span class="todo">TODO Item 1 Lots of text now with actual words etc etc this is america dont catch you trippin now</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="exp">
+                    <textarea class="inputtxt clearfix" rows="4" cols="20" readonly> </textarea>
+                  </span>
+                </label>
+                <div class="listButtons">
+                  <button class="listButton" id="remove">remove</button>
+                  <button class="listButton" id="move">move</button>
+                  <button class="listButton" id="edit">edit</button>
+                  <button class="listButton" id="add">add</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -128,7 +147,7 @@
         
         <div id="about">
           <h2>About Us</h2>
-          <h4>The LARI Management System will help you keep track and monitor AFSL UAS for flight operation missions.</h4>
+          <p>The LARI Management System will help you keep track and monitor AFSL UAS for flight operation missions.</p>
         </div>
       </div>
     </div>
