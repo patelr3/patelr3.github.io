@@ -5,7 +5,8 @@
 }
 
 .checkMenu {
-  height: 80px;
+  overflow: auto;
+  height: auto;
   width: 100%;
   padding: 10px 0px;
   overflow: auto;
@@ -25,8 +26,9 @@
 }
 
 #checklistDrop {
-  height: 100%;
+  height: 30px;
   width: 50%;
+  margin: 15px 0px;
   float: left;
   font-size: 20px;
   text-transform: uppercase;
@@ -37,7 +39,7 @@
 }
 
 .checkMenuButtons {
-  float: right;
+  float: left;
   padding: 0px 10px;
 }
 
@@ -102,7 +104,7 @@
   height: 100%;
   width: 90%;
   min-width: 600px;
-  float: left;
+  float: right;
 }
 
 .section {
@@ -194,6 +196,8 @@
 
 .listElement {
   height: 100%;
+  width: 100%;
+  min-width: 700px;
   float: left;
 }
 

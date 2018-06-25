@@ -18,9 +18,9 @@ h3 {
 }
 
 .menu {
-  height: 61px;
+  overflow: auto;
+  height: auto;
   width: 100%;
-  min-width: 320px;
   background-color: white;
   border-bottom: 1px solid gray;
   float: left;
