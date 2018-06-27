@@ -27,7 +27,7 @@
 
 #checklistDrop {
   height: 30px;
-  width: 50%;
+  width: 40%;
   margin: 15px 0px;
   float: left;
   font-size: 20px;
@@ -118,7 +118,8 @@
   width: 50%;
   white-space: normal;
   float: left;
-  border-right: solid 1px gray;
+  padding: 0px 20px 0px 0px;
+  border-right: 1px solid gray;
 }
 
 .steps .exp {
@@ -144,7 +145,7 @@
   user-select: none;
 }
 
-.steps .item input {
+.item input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -164,34 +165,13 @@
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a green background */
-.item input:checked ~ .checkmark {
-  background-color: #00d832;
+.item:hover > .checkmark {
+  background-color: #ccc;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.item input:checked ~ .checkmark:after {
+.item > .checkmark.after {
+  background-color: #00d832 !important;
   display: block;
-}
-
-/* Style the checkmark/indicator */
-.item .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .listElement {
@@ -233,10 +213,11 @@
   border: 0px solid black;
   outline: none;
   cursor: pointer;
+  z-index: -2;
 }
 
 /* Formats the textarea when user is editing */
 .item .edit {
-  outline: 2px solid black;
+  outline: 2px solid #eee;
   cursor: auto;
 }

@@ -6,6 +6,14 @@ function main() {
   // Add startup to menuButtons array
   menuButtons.push('lariStartup');
   
+  // Adjust display margin-top to height of menu
+  // (for resizing purposes)
+  $('.display').css('margin-top', $('.menu').css('height'));
+  $( window ).resize(function () {
+    var displayMargin = $('.menu').css('height');
+    $('.display').css('margin-top', displayMargin);
+  });
+  
   // Change state on menu button clicks
   $('.menuButton').on('click', function() {
     // Menu buttons visually change in state when clicked/unclicked

@@ -18,12 +18,13 @@ h3 {
 }
 
 .menu {
-  overflow: auto;
-  height: auto;
+  position: fixed;
+  top: 0;
   width: 100%;
   background-color: white;
   border-bottom: 1px solid gray;
   float: left;
+  z-index: 10;
 }
 
 .menu .menuButtons {
@@ -83,7 +84,6 @@ h3 {
 .display {
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 
 .displayOpt {

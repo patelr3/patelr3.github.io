@@ -26,18 +26,25 @@ function main() {
     }
   });
   
-  // Handle the checklist sections
+  // Handle the item clicks (checkmarking)
+  $('.item').on('click', function() {
+    var checkmark = $(this).find('.checkmark')[0];
+    if (checkmark.classList.contains('after')) {
+      checkmark.classList.remove('after');
+    } else {
+      checkmark.classList.add('after');
+    }
+  });
   
-  // Handle textarea clicks
-  $('textarea').on('click', function() {
-    var textarea = $(this)[0];
-    if (!textarea.classList.contains('edit')) {
-      var checkmark = $(this).parent().parent().find('.checkmark')[0];
-      if (checkmark.classList.contains('after')) {
-        checkmark.classList.remove('after');
-      } else {
-        checkmark.classList.add('after');
-      }
+  $('.inputtxt').on('click', function() {
+    if (!$(this).hasClass('edit')) {
+      return;
+    }
+    var checkmark = $(this).parent().parent().find('.checkmark')[0];
+    if (checkmark.classList.contains('after')) {
+      checkmark.classList.remove('after');
+    } else {
+      checkmark.classList.add('after');
     }
   });
   
@@ -53,13 +60,16 @@ function main() {
         $(this).toggleClass('pressed');
         
         // Change text area state
-        var textarea = $(this).parent().parent().find('textarea')[0];
-        if (textarea.classList.contains('edit')) {
-          textarea.readOnly = true;
-          textarea.classList.remove('edit');
-        } else {
-          textarea.readOnly = false;
-          textarea.classList.add('edit');
+        var textareaArray = $(this).parent().parent().find('textarea');
+        for (var i = 0; i < textareaArray.length; i++) {
+          var textarea = textareaArray[i];
+          if (textarea.classList.contains('edit')) {
+            textarea.readOnly = true;
+            textarea.classList.remove('edit');
+          } else {
+            textarea.readOnly = false;
+            textarea.classList.add('edit');
+          }
         }
         break;
       case 'move':
