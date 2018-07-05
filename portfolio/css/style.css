@@ -1,0 +1,132 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+/* General text styles */
+h1 {
+  text-align: center;
+}
+
+/* Overall menu styles */
+#menu {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  /* background-color: #3f3f3f; */
+  z-index: 10;
+}
+
+.navButtons {
+  float: left;
+}
+
+/* Menu buttons */
+.menuButton {
+  height: 60px;
+  width: 180px;
+  padding: 0px;
+  background-color: white;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  border: 0px solid black;
+  float: left;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.menuButton:hover {
+  background-color: #ebeaef;
+}
+
+.menuButton:focus {
+  outline: 0;
+}
+
+.selected {
+  background-color: #d2d1d6;
+}
+
+.dropdownContent .selected {
+  background-color: red !important;
+}
+
+#home {
+  width: 60px; 
+}
+
+.links {
+  float: right;
+}
+
+.linkButton {
+  height: 45px;
+  width: 45px;
+  margin: 5px 8px;
+  border-radius: 30px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px black;
+  float: right;
+}
+
+/* Handles Project dropdown */
+.dropdown {
+  float: left;
+}
+
+.dropdownContent {
+  position: fixed;
+  left: 60px;
+  top: 60px;
+  width: 180px;
+  float: left;
+  display: none;
+}
+
+.dropdownButton {
+  transition: 0.2s;
+  height: 60px;
+  width: 180px;
+  border: 0px solid black;
+  background-color: #7c7c7c;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  opacity: 0.7;
+  display: block;
+}
+
+.dropdownContent .dropdownButton:focus {
+  outline: 0;
+}
+
+.dropdownContent .dropdownButton:hover {
+  background-color: #4f4f4f;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/* Home Page Info */
+.page {
+  width: 100%;
+  padding: 10px 0px;
+  display: none;
+}
+
+#homePage {
+  display: block;
+}

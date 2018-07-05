@@ -1,10 +1,74 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Ravi Patel's Portfolio</title>
+    
+    <!-- Main Portfolio Window Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./portfolio/css/style.css">
+    
+    <!-- JQuery -->
+    <script src="./portfolio/js/libraries/jquery-3.3.1.min.js"></script>
+    
+    <!-- Javascript -->
+    <script src="./portfolio/js/portfolio.js"></script>
+  </head>
+
   <body>
-  <h1>Project Links</h1>
-  <p>I'm hosted with GitHub Pages.</p>
-  <h2>LARI</h2>
-  <a href="./lari/lari.html">LARI project</a>
-  <p>An AFSL(Autonomous Flight Systems Lab) related project that focuses on building a management system for the lab.</p>
+    <!-- Main Menu options -->
+    <div class="menu" id="menu">
+      <div class="navButtons">
+        <button class="menuButton" id="home">H</button>
+        <div class="dropdown" id="projectsDropdown">
+          <button class="menuButton" id="projects">Projects</button>
+          <div class="dropdownContent">
+            <button class="dropdownButton">Project 1</button>
+            <button class="dropdownButton">Project 2</button>
+            <button class="dropdownButton">Project 3</button>
+          </div>
+        </div>
+        <button class="menuButton" id="experiences">Experiences</button>
+        <button class="menuButton" id="contact">Contact</button>
+        <button class="menuButton" id="feedback">Feedback</button>
+      </div>
+      
+      <div class="links">
+        <a href="#" class="linkButton" id="linkedIn">LI</a>
+        <a href="#" class="linkButton" id="email">EM</a>
+      </div>
+    </div>
+    
+    <!-- Pages -->
+    <div class="pages">
+      <!-- Home Page -->
+      <div class="page" id="homePage">
+        <h1>Home Page</h1>
+      </div>
+      <!-- Project Pages -->
+      <div class="page" id="projPage">
+        <h1>Projects</h1>
+      </div>
+      <div class="page" id="projPage1">
+        <h1>Project 1</h1>
+      </div>
+      <div class="page" id="projPage2">
+        <h1>Project 2</h1>
+      </div>
+      <div class="page" id="projPage3">
+        <h1>Project 3</h1>
+      </div>
+      <!-- Experiences Page -->
+      <div class="page" id="expPage">
+        <h1>Experiences</h1>
+      </div>
+      <!-- Contact Page -->
+      <div class="page" id="contactPage">
+        <h1>Contact</h1>
+      </div>
+      <!-- Feedback Page -->
+      <div class="page" id="feedbackPage">
+        <h1>Feedback</h1>
+      </div>
+    </div>
+    
   </body>
 </html>

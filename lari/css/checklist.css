@@ -80,7 +80,7 @@
 .stepMenu {
   height: 100%;
   width: 100px;
-  display: block;
+  display: none;
   float: left;
 }
 
@@ -102,16 +102,17 @@
 
 .steps {
   height: 100%;
-  width: 90%;
+  width: 100%;
   min-width: 600px;
-  float: right;
+  float: left;
 }
 
 .section {
   height: 100%;
   width: 100%;
   float: left;
-  border: 2px solid black;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 .steps .todo {
