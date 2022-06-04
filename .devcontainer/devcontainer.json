@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.234.0/containers/javascript-node
+{
+	"name": "React",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "18"}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		}
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"mgmcdermott.vscode-language-babel",
+		"ms-azuretools.vscode-docker",
+		"waderyan.gitblame"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	"features": {
+		"common": {
+			"username": "automatic",
+			"uid": "automatic",
+			"gid": "automatic",
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true,
+			"nonFreePackages": false
+		},
+		"docker-from-docker": {
+			"version": "latest",
+			"moby": false,
+			"dockerDashComposeVersion": "v1"
+		}
+	},
+
+	"remoteUser": "node"
+}
